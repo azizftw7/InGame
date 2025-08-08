@@ -7,19 +7,24 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.ingame.ui.home.HomeFragment"
+        android:name="com.example.ingame.view.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.ingame.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_members"
+        android:name="com.example.ingame.view.MembersFragment"
+        android:label="@string/members"
+        tools:layout="@layout/fragment_members" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.ingame.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_attendance"
+        android:name="com.example.ingame.view.AttendanceFragment"
+        android:label="@string/attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.ingame.view.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
