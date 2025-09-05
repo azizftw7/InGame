@@ -9,7 +9,9 @@
     <item
         android:id="@+id/navigation_members"
         android:icon="@drawable/baseline_people_24"
-        android:title="@string/members" />
+        android:title="@string/members"
+
+        />
 
     <item
         android:id="@+id/navigation_attendance"

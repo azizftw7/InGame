@@ -7,17 +7,18 @@
     android:elevation="8dp">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/topHolder"
         android:layout_width="411dp"
         android:layout_height="77dp"
         android:layout_marginTop="@dimen/fragment_margin_top"
-        android:background="#B62626"
+        android:background="@color/surface"
         android:orientation="horizontal"
         app:circularflow_radiusInDP="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -25,7 +26,7 @@
             android:layout_margin="10dp"
 
             android:layout_weight="1"
-            android:background="#D1C4E9"
+            android:background="@color/surface"
             android:elevation="4dp"
             android:padding="10dp"
             app:cardCornerRadius="15dp">
@@ -55,7 +56,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/members"
-                        android:textColor="#212121"
+                        android:textColor="@color/onSurface"
                         android:textSize="18sp"
 
                         />
@@ -64,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="10"
-                        android:textColor="#121111"
+                        android:textColor="@color/onSurface"
                         android:textSize="20sp"
                         android:textStyle="bold"
 
@@ -82,7 +83,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
 
-            android:background="#D1C4E9"
+            android:background="@color/surface"
             android:elevation="6dp"
             android:padding="10dp"
             app:cardCornerRadius="10dp">
@@ -112,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Events"
-                        android:textColor="#212121"
+                        android:textColor="@color/onSurface"
                         android:textSize="18sp"
 
                         />
@@ -121,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5"
-                        android:textColor="#121111"
+                        android:textColor="@color/onSurface"
                         android:textSize="20sp"
                         android:textStyle="bold"
 
@@ -139,7 +140,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
 
-            android:background="#D1C4E9"
+            android:background="@color/surface"
             android:elevation="6dp"
             android:padding="10dp"
             app:cardCornerRadius="10dp">
@@ -175,7 +176,7 @@
                         android:scrollHorizontally="false"
                         android:singleLine="true"
                         android:text="@string/attendance"
-                        android:textColor="#212121"
+                        android:textColor="@color/onSurface"
                         android:textSize="16sp"
 
                         />
@@ -185,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:text="80%"
 
-                        android:textColor="#121111"
+                        android:textColor="@color/onSurface"
                         android:textSize="20sp"
                         android:textStyle="bold"
 
@@ -202,26 +203,27 @@
         android:id="@+id/eventCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-        android:layout_marginBottom="18dp"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:background="@color/surface"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        app:layout_constraintTop_toBottomOf="@+id/attendancebtn">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_height="248dp"
+            android:background="@color/surface"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="Upcoming Events"
+                android:textColor="@color/onSurface"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -243,7 +245,7 @@
                     android:layout_marginBottom="4dp"
                     android:padding="4dp"
                     android:text="event1-1sep"
-                    android:textColor="@color/black"
+                    android:textColor="@color/onSurface"
                     android:textSize="15sp">
 
                 </TextView>
@@ -254,7 +256,7 @@
                     android:layout_marginBottom="4dp"
                     android:padding="4dp"
                     android:text="event1-1sep"
-                    android:textColor="@color/black"
+                    android:textColor="@color/onSurface"
                     android:textSize="15sp">
 
                 </TextView>
@@ -265,20 +267,19 @@
                     android:layout_marginBottom="4dp"
                     android:padding="4dp"
                     android:text="event1-1sep"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    >
+                    android:textColor="@color/onSurface"
+                    android:textSize="15sp">
 
                 </TextView>
             </LinearLayout>
+
             <Button
                 android:id="@+id/btnAddEvent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Event"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
-                />
+                android:text="Add Event"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -287,21 +288,22 @@
         android:id="@id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Top 3 Members  ( mba3ed sidna RH) :"
+        android:textColor="@color/onBackground"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventCard" />
+        app:layout_constraintTop_toBottomOf="@+id/topHolder" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="#626262"
+        android:layout_marginTop="20dp"
+        android:background="@color/surface"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -327,6 +329,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1st Member"
+                    android:textColor="@color/onSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -334,6 +337,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="⭐ 9.5"
+                    android:textColor="@color/onSurface"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -356,6 +360,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2nd Member"
+                    android:textColor="@color/onSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -363,6 +368,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="⭐ 8.5"
+                    android:textColor="@color/onSurface"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -385,6 +391,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3rd Member"
+                    android:textColor="@color/onSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -392,6 +399,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="⭐ 7.5"
+                    android:textColor="@color/onSurface"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -399,11 +407,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/attendancebtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:padding="12dp"
+        android:background="@color/buttons"
 
         android:text="@string/mark_attendance"
 
