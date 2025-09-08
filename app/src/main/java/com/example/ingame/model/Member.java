@@ -4,7 +4,15 @@ public class Member {
     private int MemberId;
     private String Name;
 
+    public Department getDep() {
+        return dep;
+    }
 
+    public void setDep(Department dep) {
+        this.dep = dep;
+    }
+
+    private Department dep;
     public Member(int MemberId, String name) {
         MemberId = MemberId;
         Name = name;
