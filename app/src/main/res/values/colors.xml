@@ -5,6 +5,8 @@
     <color name="onPrimary">#FFFFFF</color>
 
     <color name="buttons">#780b16</color> <!-- optional accent (gray for now) -->
+    <color name="fabuttons">#DA610F0F</color>
+    <color name="secondary">#7a0b16</color>
     <color name="onSecondary">#FFFFFF</color>
 
     <!-- App Background -->
@@ -15,6 +17,5 @@
     <color name="surface">#d4d2d2</color>
     <color name="onSurface">#000000</color>
 
-    <color name="secondary">#7a0b16</color>
 
 </resources>

@@ -15,6 +15,8 @@
     <string name="members_events">Members/Events :</string>
     <string name="mark_attendance">Mark Attendance</string>
     <string name="add_event">Add Event</string>
+    <string name="fabformembers">fabForMembers</string>
+    <string name="memberlist">MemberList</string>
 
 
 </resources>
