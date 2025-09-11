@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:minHeight="56dp"
+    android:padding="8dp"
+    android:focusable="true"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatarPers"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/id_person"
+            android:contentDescription="@string/member_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="12dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/avatarPers"
+            app:layout_constraintBottom_toBottomOf="@id/avatarPers"
+
+            app:layout_constraintStart_toEndOf="@id/avatarPers"
+            android:layout_marginStart="12dp"
+
+            >
+            <TextView
+                android:id="@+id/memeberName"
+                android:layout_width="wrap_content"
+                android:text="@string/member_1"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/memeberDep"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@color/onSurface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/organisation_department"
+                >
+            </TextView>
+        </LinearLayout>
+         <ImageView
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_marginEnd="12dp"
+             android:src="@drawable/chevron_right"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="@id/avatarPers"
+             app:layout_constraintBottom_toBottomOf="@id/avatarPers"
+
+
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
