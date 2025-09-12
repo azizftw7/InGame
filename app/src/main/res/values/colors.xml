@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Brand Colors -->
-    <color name="primary">#2f0000</color> <!-- replace with exact logo red -->
+    <color name="primary">#2f0000</color>
     <color name="onPrimary">#FFFFFF</color>
 
-    <color name="buttons">#780b16</color> <!-- optional accent (gray for now) -->
+    <color name="buttons">#780b16</color>
     <color name="fabuttons">#DA610F0F</color>
     <color name="secondary">#7a0b16</color>
     <color name="onSecondary">#FFFFFF</color>
@@ -16,6 +16,9 @@
     <!-- Surface (cards, elevated UI) -->
     <color name="surface">#d4d2d2</color>
     <color name="onSurface">#000000</color>
-
+    <!-- chips colors-->
+    <color name="chip_color_absent">#FFCDD2</color>
+    <color name="chip_color_present">#C8E6C9</color>
+    <color name="chip_color_excused">#BBDEFB</color>
 
 </resources>

@@ -61,8 +61,41 @@
                 android:text="@string/organisation_department"
                 >
             </TextView>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPresent"
+                    android:backgroundTint="@color/chip_color_present"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Present: 3"
+                    android:textSize="14sp"
+                    android:clickable="false"
+                    android:checkable="false"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAbsent"
+                    android:backgroundTint="@color/chip_color_absent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abscence: 3"
+                    android:textSize="14sp"
+                    android:clickable="false"
+                    android:checkable="false"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLate"
+                    android:backgroundTint="@color/chip_color_excused"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Late: 3"
+                    android:textSize="14sp"
+                    android:clickable="false"
+                    android:checkable="false"/>
+            </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
          <ImageView
+             android:id="@+id/chevronRight"
              android:layout_width="30dp"
              android:layout_height="30dp"
              android:layout_marginEnd="12dp"
@@ -70,8 +103,6 @@
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintTop_toTopOf="@id/avatarPers"
              app:layout_constraintBottom_toBottomOf="@id/avatarPers"
-
-
              />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

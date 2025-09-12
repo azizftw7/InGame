@@ -3,12 +3,19 @@ package com.example.ingame.view;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ingame.R;
+import com.example.ingame.controller.memberAdapter;
+import com.example.ingame.model.Member;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +32,7 @@ public class MembersFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private List<Member> memberList;
     public MembersFragment() {
         // Required empty public constructor
     }
@@ -51,16 +58,24 @@ public class MembersFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        // Hardcoded members for now
+        memberList = new ArrayList<>();
+        memberList.add(new Member(1, "Alice"));
+        memberList.add(new Member(2, "Bob"));
+        memberList.add(new Member(3, "Charlie"));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_members, container, false);
+        View view = inflater.inflate(R.layout.fragment_members, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recycleMembers);
+        memberAdapter adapter = new memberAdapter(memberList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        return view;
+
     }
 }
