@@ -2,6 +2,7 @@ package com.example.ingame.controller;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -50,8 +51,7 @@ public class memberAdapter extends RecyclerView.Adapter<memberAdapter.MemberView
         holder.chipLate.setText("Late: 0");
 
 
-        holder.avatar.setImageResource(R.drawable.id_person);
-        holder.chevron.setImageResource(R.drawable.chevron_right);
+
     }
 
 
@@ -67,7 +67,10 @@ public class memberAdapter extends RecyclerView.Adapter<memberAdapter.MemberView
 
         TextView memberName, memberDep;
         Chip chipPresent, chipAbsent, chipLate;
-        ImageView avatar, chevron;
+        ImageView avatar ;
+
+        ImageButton deletebtn;
+
 
         public MemberViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,7 +80,7 @@ public class memberAdapter extends RecyclerView.Adapter<memberAdapter.MemberView
             chipAbsent = itemView.findViewById(R.id.chipAbsent);
             chipLate = itemView.findViewById(R.id.chipLate);
             avatar = itemView.findViewById(R.id.avatarPers);
-            chevron = itemView.findViewById(R.id.chevronRight);
+            deletebtn = itemView.findViewById(R.id.deleteBtn);
         }
 
     }

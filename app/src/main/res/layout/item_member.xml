@@ -94,15 +94,17 @@
                     android:checkable="false"/>
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
-         <ImageView
-             android:id="@+id/chevronRight"
-             android:layout_width="30dp"
-             android:layout_height="30dp"
-             android:layout_marginEnd="12dp"
-             android:src="@drawable/chevron_right"
+         <ImageButton
+             android:id="@+id/deleteBtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_delete"
+             android:background="?attr/selectableItemBackgroundBorderless"
              app:layout_constraintEnd_toEndOf="parent"
-             app:layout_constraintTop_toTopOf="@id/avatarPers"
-             app:layout_constraintBottom_toBottomOf="@id/avatarPers"
+             android:contentDescription="@string/deletemember"
+             android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="@id/avatarPers"
+            app:layout_constraintBottom_toBottomOf="@id/avatarPers"
              />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
