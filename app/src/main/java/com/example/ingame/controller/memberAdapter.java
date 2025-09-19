@@ -1,4 +1,5 @@
 package com.example.ingame.controller;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ingame.R;
 import com.example.ingame.model.Member;
 import com.google.android.material.chip.Chip;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.List;
 
 public class memberAdapter extends RecyclerView.Adapter<memberAdapter.MemberViewHolder> {
     private List<Member> memberList;
-
-    public memberAdapter(List<Member> memberList) {
+    private Context context;
+    public memberAdapter(List<Member> memberList,Context context) {
+        this.context=context;
         this.memberList = memberList;
     }
     @NonNull
@@ -49,6 +52,20 @@ public class memberAdapter extends RecyclerView.Adapter<memberAdapter.MemberView
         holder.chipPresent.setText("Present: 3");
         holder.chipAbsent.setText("Absent: 1");
         holder.chipLate.setText("Late: 0");
+
+        holder.deletebtn.setOnClickListener(v -> {
+            new MaterialAlertDialogBuilder(context)
+                    .setTitle("Delete Member")
+                    .setMessage("Are you sure you want to delete " + member.getName() + "?")
+                    .setPositiveButton("Delete", (dialog, which) -> {
+
+                    })
+                    .setNegativeButton("Cancel", (dialog, which) -> {
+                        dialog.dismiss();
+                    })
+                    .show();
+        });
+
 
 
 

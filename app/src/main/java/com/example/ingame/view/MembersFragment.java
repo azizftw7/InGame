@@ -72,7 +72,7 @@ public class MembersFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_members, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycleMembers);
-        memberAdapter adapter = new memberAdapter(memberList);
+        memberAdapter adapter = new memberAdapter(memberList, requireContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
