@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.AutoCompleteTextView;
 
 import com.example.ingame.R;
 
@@ -61,6 +63,15 @@ public class AttendanceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_attendance, container, false);
+        View view = inflater.inflate(R.layout.fragment_attendance, container, false);
+        AutoCompleteTextView autoCompleteEventType = view.findViewById(R.id.autoCompleteEventType);
+        autoCompleteEventType.setAccessibilityDelegate(new View.AccessibilityDelegate() {
+            @Override
+            public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfo info) {
+                super.onInitializeAccessibilityNodeInfo(host, info);
+                info.setText(autoCompleteEventType.getHint());
+            }
+        });
+        return view;
     }
 }
