@@ -20,7 +20,7 @@
             android:padding="16dp"
             android:gravity="center_vertical">
 
-            <!-- Event Name -->
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,16 +42,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Event Type"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
                 app:endIconMode="dropdown_menu">
 
-                <AutoCompleteTextView
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/autoCompleteEventType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
+                    android:paddingTop="20dp"
+                    android:paddingStart="8dp"
                     android:minHeight="48dp"
-                    android:inputType="none"/>
+                    android:inputType="none"
+                    tools:ignore="SpeakableTextPresentCheck"/>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
 import com.example.ingame.R;
@@ -59,19 +60,26 @@ public class AttendanceFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_attendance, container, false);
-        AutoCompleteTextView autoCompleteEventType = view.findViewById(R.id.autoCompleteEventType);
-        autoCompleteEventType.setAccessibilityDelegate(new View.AccessibilityDelegate() {
-            @Override
-            public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfo info) {
-                super.onInitializeAccessibilityNodeInfo(host, info);
-                info.setText(autoCompleteEventType.getHint());
-            }
-        });
-        return view;
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            String[] eventTypes = {"Department Reunion", "Office Reunion", "General Event"};
+            View view = inflater.inflate(R.layout.fragment_attendance, container, false);
+            AutoCompleteTextView autoCompleteEventType = view.findViewById(R.id.autoCompleteEventType);
+            autoCompleteEventType.setAccessibilityDelegate(new View.AccessibilityDelegate() {
+                @Override
+                public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfo info) {
+                    super.onInitializeAccessibilityNodeInfo(host, info);
+                    info.setText(autoCompleteEventType.getHint());
+                }
+            });
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                    requireContext(),
+                    android.R.layout.simple_dropdown_item_1line,
+                    eventTypes
+            );
+            autoCompleteEventType.setAdapter(adapter);
+
+            return view;
+        }
     }
-}
