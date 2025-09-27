@@ -3,6 +3,8 @@ package com.example.ingame.view;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,7 +81,8 @@ public class AttendanceFragment extends Fragment {
                     eventTypes
             );
             autoCompleteEventType.setAdapter(adapter);
-
+            RecyclerView recyclerView=view.findViewById(R.id.recycleAttendance);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
             return view;
         }
     }
