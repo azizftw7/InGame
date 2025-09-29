@@ -22,5 +22,8 @@
     <string name="organisation_department">organisation department</string>
     <string name="deletemember">deleteMember</string>
 
+    <string name="department">department</string>
+    <string name="member_name">member name</string>
+
 
 </resources>

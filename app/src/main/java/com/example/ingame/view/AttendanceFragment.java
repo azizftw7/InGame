@@ -14,6 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
 import com.example.ingame.R;
+import com.example.ingame.controller.AttendanceAdapter;
+import com.example.ingame.model.Member;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,6 +88,13 @@ public class AttendanceFragment extends Fragment {
             autoCompleteEventType.setAdapter(adapter);
             RecyclerView recyclerView=view.findViewById(R.id.recycleAttendance);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+            recyclerView.setHasFixedSize(true);
+            List<Member> memberList = new ArrayList<>();
+            memberList.add(new Member(1, "John Doe"));
+            memberList.add(new Member(2, "Jane Smith"));
+            memberList.add(new Member(3, "Alice Johnson"));
+            AttendanceAdapter adapter1 = new AttendanceAdapter(memberList);
+            recyclerView.setAdapter(adapter1);
             return view;
         }
     }
